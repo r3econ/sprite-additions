@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF044E2414758C5000B2C688 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF044E2314758C5000B2C688 /* UIKit.framework */; };
+		AF044E2614758C5000B2C688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF044E2514758C5000B2C688 /* Foundation.framework */; };
+		AF044E2814758C5000B2C688 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF044E2714758C5000B2C688 /* CoreGraphics.framework */; };
+		AF044E2E14758C5000B2C688 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF044E2C14758C5000B2C688 /* InfoPlist.strings */; };
+		AF044E3014758C5000B2C688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E2F14758C5000B2C688 /* main.m */; };
+		AF044E3414758C5000B2C688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E3314758C5000B2C688 /* AppDelegate.m */; };
+		AF044E3714758C5000B2C688 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E3614758C5000B2C688 /* MasterViewController.m */; };
+		AF044E3D14758C5000B2C688 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF044E3B14758C5000B2C688 /* MasterViewController.xib */; };
+		AF044E4C14758D8300B2C688 /* UIImage+Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E4B14758D8300B2C688 /* UIImage+Sprite.m */; };
+		AF044E4E1475951100B2C688 /* explosion_4_39_128.png in Resources */ = {isa = PBXBuildFile; fileRef = AF044E4D1475951100B2C688 /* explosion_4_39_128.png */; };
+		AF044E541476E9C400B2C688 /* explosion_4_39_128_debug.png in Resources */ = {isa = PBXBuildFile; fileRef = AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF044E1F14758C5000B2C688 /* SpriteAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF044E2314758C5000B2C688 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF044E2514758C5000B2C688 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF044E2714758C5000B2C688 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF044E2B14758C5000B2C688 /* SpriteAnimationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteAnimationDemo-Info.plist"; sourceTree = "<group>"; };
+		AF044E2D14758C5000B2C688 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF044E2F14758C5000B2C688 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF044E3114758C5000B2C688 /* SpriteAnimationDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteAnimationDemo-Prefix.pch"; sourceTree = "<group>"; };
+		AF044E3214758C5000B2C688 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF044E3314758C5000B2C688 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF044E3514758C5000B2C688 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		AF044E3614758C5000B2C688 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		AF044E3C14758C5000B2C688 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		AF044E4A14758D8300B2C688 /* UIImage+Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Sprite.h"; sourceTree = "<group>"; };
+		AF044E4B14758D8300B2C688 /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Sprite.m"; sourceTree = "<group>"; };
+		AF044E4D1475951100B2C688 /* explosion_4_39_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion_4_39_128.png; sourceTree = "<group>"; };
+		AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion_4_39_128_debug.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF044E1C14758C5000B2C688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF044E2414758C5000B2C688 /* UIKit.framework in Frameworks */,
+				AF044E2614758C5000B2C688 /* Foundation.framework in Frameworks */,
+				AF044E2814758C5000B2C688 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF044E1414758C5000B2C688 = {
+			isa = PBXGroup;
+			children = (
+				AF044E2914758C5000B2C688 /* SpriteAnimationDemo */,
+				AF044E2214758C5000B2C688 /* Frameworks */,
+				AF044E2014758C5000B2C688 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF044E2014758C5000B2C688 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E1F14758C5000B2C688 /* SpriteAnimationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF044E2214758C5000B2C688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E2314758C5000B2C688 /* UIKit.framework */,
+				AF044E2514758C5000B2C688 /* Foundation.framework */,
+				AF044E2714758C5000B2C688 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF044E2914758C5000B2C688 /* SpriteAnimationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E4914758D8300B2C688 /* UIImage+Sprite */,
+				AF044E3214758C5000B2C688 /* AppDelegate.h */,
+				AF044E3314758C5000B2C688 /* AppDelegate.m */,
+				AF044E3514758C5000B2C688 /* MasterViewController.h */,
+				AF044E3614758C5000B2C688 /* MasterViewController.m */,
+				AF044E3B14758C5000B2C688 /* MasterViewController.xib */,
+				AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */,
+				AF044E4D1475951100B2C688 /* explosion_4_39_128.png */,
+				AF044E2A14758C5000B2C688 /* Supporting Files */,
+			);
+			path = SpriteAnimationDemo;
+			sourceTree = "<group>";
+		};
+		AF044E2A14758C5000B2C688 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E2B14758C5000B2C688 /* SpriteAnimationDemo-Info.plist */,
+				AF044E2C14758C5000B2C688 /* InfoPlist.strings */,
+				AF044E2F14758C5000B2C688 /* main.m */,
+				AF044E3114758C5000B2C688 /* SpriteAnimationDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF044E4914758D8300B2C688 /* UIImage+Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E4A14758D8300B2C688 /* UIImage+Sprite.h */,
+				AF044E4B14758D8300B2C688 /* UIImage+Sprite.m */,
+			);
+			path = "UIImage+Sprite";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF044E1E14758C5000B2C688 /* SpriteAnimationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF044E4314758C5000B2C688 /* Build configuration list for PBXNativeTarget "SpriteAnimationDemo" */;
+			buildPhases = (
+				AF044E1B14758C5000B2C688 /* Sources */,
+				AF044E1C14758C5000B2C688 /* Frameworks */,
+				AF044E1D14758C5000B2C688 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteAnimationDemo;
+			productName = SpriteAnimationDemo;
+			productReference = AF044E1F14758C5000B2C688 /* SpriteAnimationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF044E1614758C5000B2C688 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = AF044E1914758C5000B2C688 /* Build configuration list for PBXProject "SpriteAnimationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AF044E1414758C5000B2C688;
+			productRefGroup = AF044E2014758C5000B2C688 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF044E1E14758C5000B2C688 /* SpriteAnimationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF044E1D14758C5000B2C688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF044E2E14758C5000B2C688 /* InfoPlist.strings in Resources */,
+				AF044E3D14758C5000B2C688 /* MasterViewController.xib in Resources */,
+				AF044E4E1475951100B2C688 /* explosion_4_39_128.png in Resources */,
+				AF044E541476E9C400B2C688 /* explosion_4_39_128_debug.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF044E1B14758C5000B2C688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF044E3014758C5000B2C688 /* main.m in Sources */,
+				AF044E3414758C5000B2C688 /* AppDelegate.m in Sources */,
+				AF044E3714758C5000B2C688 /* MasterViewController.m in Sources */,
+				AF044E4C14758D8300B2C688 /* UIImage+Sprite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF044E2C14758C5000B2C688 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF044E2D14758C5000B2C688 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF044E3B14758C5000B2C688 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF044E3C14758C5000B2C688 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF044E4114758C5000B2C688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF044E4214758C5000B2C688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF044E4414758C5000B2C688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpriteAnimationDemo/SpriteAnimationDemo-Prefix.pch";
+				INFOPLIST_FILE = "SpriteAnimationDemo/SpriteAnimationDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF044E4514758C5000B2C688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpriteAnimationDemo/SpriteAnimationDemo-Prefix.pch";
+				INFOPLIST_FILE = "SpriteAnimationDemo/SpriteAnimationDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF044E1914758C5000B2C688 /* Build configuration list for PBXProject "SpriteAnimationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF044E4114758C5000B2C688 /* Debug */,
+				AF044E4214758C5000B2C688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF044E4314758C5000B2C688 /* Build configuration list for PBXNativeTarget "SpriteAnimationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF044E4414758C5000B2C688 /* Debug */,
+				AF044E4514758C5000B2C688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF044E1614758C5000B2C688 /* Project object */;
+}
