@@ -84,7 +84,7 @@
         while (positionX < width) {
             
             CGImageRef sprite = CGImageCreateWithImageInRect(spriteSheet, CGRectMake(positionX, positionY, size.width, size.height));
-            [tempArray addObject:[UIImage imageWithCGImage:sprite]];
+            [tempArray addObject:[UIImage imageWithCGImage:sprite scale:image.scale orientation:image.imageOrientation]];
             
             CGImageRelease(sprite);
             

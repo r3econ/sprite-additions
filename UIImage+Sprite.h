@@ -37,7 +37,7 @@
 /**
  The method returns an array with UIImages. Original sprite sheet is sliced into smaller chunks, each of the specified size.
  @param image the image with sprite sheet (texture atlas)
- @param size the size of the single chunk
+ @param size the size of the single chunk (in pixels)
  @returns the array of UIImages, each representing a single animation frame
  */
 -(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
@@ -46,7 +46,7 @@
  The method returns an array with UIImages. Original sprite sheet is sliced into smaller chunks, each of the specified size.
  @param image the image with sprite sheet (texture atlas)
  @param range the range of the chunks
- @param size the size of the single chunk
+ @param size the size of the single chunk (in pixels)
  @returns the array of UIImages, each representing a single animation frame
  */
 -(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
