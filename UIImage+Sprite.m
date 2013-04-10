@@ -29,13 +29,13 @@
 
 @implementation UIImage (Sprite)
 
--(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size {
++ (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size {
 
-    return [self spritesWithSpriteSheetImage:self inRange:NSMakeRange(0, lroundf(MAXFLOAT)) 
+    return [self spritesWithSpriteSheetImage:image inRange:NSMakeRange(0, lroundf(MAXFLOAT))
                                   spriteSize:size];
 }
 
--(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size {
++ (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size {
 
     if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0) return nil;
     NSLog(@"%i %i", range.location, range.length);
