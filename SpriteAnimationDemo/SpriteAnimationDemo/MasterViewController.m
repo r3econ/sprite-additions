@@ -9,9 +9,12 @@
 #import "MasterViewController.h"
 #import "UIImage+Sprite.h"
 
+
 @implementation MasterViewController
 
-- (void)dealloc {
+
+- (void)dealloc
+{
     [settingsView release];
     [locationLabel release];
     [lengthLabel release];
@@ -19,19 +22,27 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad {
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+
     [self setTitle:NSLocalizedString(@"Sprite Animation", @"")];
     [self switchValueChanged:customRangeSwitch];
 }
 
-- (void)viewDidUnload {
+
+- (void)viewDidUnload
+{
     [imageView release];
     imageView = nil;
     [settingsView release];
@@ -45,12 +56,15 @@
     [super viewDidUnload];
 }
 
-- (IBAction)buttonAction:(id)sender {
 
-    if ([imageView isAnimating]) {
+- (IBAction)buttonAction:(id)sender
+{
+    if ([imageView isAnimating])
+    {
         [imageView stopAnimating];
-        [((UIButton *)sender) setTitle:NSLocalizedString(@"Start animation!", @"") forState:UIControlStateNormal];
-
+        
+        [((UIButton *)sender) setTitle:NSLocalizedString(@"Start animation!", @"")
+                              forState:UIControlStateNormal];
         return;
     }
     
@@ -60,18 +74,18 @@
     //
     UIImage *spriteSheet = [UIImage imageNamed:@"explosion_4_39_128_debug"];
     
-    if ([customRangeSwitch isOn]) {
-        
-        NSRange range = NSMakeRange([locationLabel.text intValue], [lengthLabel.text intValue]);
+    if ([customRangeSwitch isOn])
+    {
+        NSRange range = NSMakeRange([locationLabel.text intValue],
+                                    [lengthLabel.text intValue]);
         
         NSArray *arrayWithSprites = [spriteSheet spritesWithSpriteSheetImage:spriteSheet 
                                                                      inRange:range 
                                                                   spriteSize:CGSizeMake(128, 128)];
         [imageView setAnimationImages:arrayWithSprites];
-
     }
-    else {
-        
+    else
+    {
         NSArray *arrayWithSprites = [spriteSheet spritesWithSpriteSheetImage:spriteSheet 
                                                                   spriteSize:CGSizeMake(128, 128)];
         [imageView setAnimationImages:arrayWithSprites];
@@ -85,33 +99,41 @@
     [imageView setAnimationDuration:animationDuration]; 
     [imageView startAnimating];
     
-    [((UIButton *)sender) setTitle:NSLocalizedString(@"Stop animation!", @"") forState:UIControlStateNormal];
+    [((UIButton *)sender) setTitle:NSLocalizedString(@"Stop animation!", @"")
+                          forState:UIControlStateNormal];
 }
 
-- (IBAction)locationValueChanged:(id)sender {
-    
+
+- (IBAction)locationValueChanged:(id)sender
+{
     locationLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
 }
 
-- (IBAction)lengthValueChanged:(id)sender {
-    
+
+- (IBAction)lengthValueChanged:(id)sender
+{
     lengthLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
 }
 
-- (IBAction)switchValueChanged:(id)sender {
-    
+
+- (IBAction)switchValueChanged:(id)sender
+{
     UISwitch *sw = (UISwitch *)sender;
     [settingsView setUserInteractionEnabled:[sw isOn]];
 
     [UIView beginAnimations:nil context:nil];
     
-    if ([sw isOn]) {
+    if ([sw isOn])
+    {
         [settingsView setAlpha:1.0];
     }
-    else {
+    else
+    {
         [settingsView setAlpha:0.2];
     }
     
     [UIView commitAnimations];
 }
+
+
 @end

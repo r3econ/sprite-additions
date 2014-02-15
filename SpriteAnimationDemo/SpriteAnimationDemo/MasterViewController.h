@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController {
 
+@interface MasterViewController : UIViewController
+{
     IBOutlet UIImageView *imageView;
     IBOutlet UILabel *lengthLabel;
     IBOutlet UILabel *locationLabel;
     IBOutlet UIView *settingsView;
     IBOutlet UISwitch *customRangeSwitch;
 }
+
 - (IBAction)buttonAction:(id)sender;
 - (IBAction)locationValueChanged:(id)sender;
 - (IBAction)lengthValueChanged:(id)sender;

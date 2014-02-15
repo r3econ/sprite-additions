@@ -27,18 +27,27 @@
 
 #import "UIImage+Sprite.h"
 
+
 @implementation UIImage (Sprite)
 
--(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size {
 
-    return [self spritesWithSpriteSheetImage:self inRange:NSMakeRange(0, lroundf(MAXFLOAT)) 
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image
+                              spriteSize:(CGSize)size
+{
+
+    return [self spritesWithSpriteSheetImage:self
+                                     inRange:NSMakeRange(0, lroundf(MAXFLOAT))
                                   spriteSize:size];
 }
 
--(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size {
 
-    if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0) return nil;
-    NSLog(@"%i %i", range.location, range.length);
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image
+                                 inRange:(NSRange)range
+                              spriteSize:(CGSize)size
+{
+    if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0)
+        return nil;
+    
     CGImageRef spriteSheet = [image CGImage];
     NSMutableArray *tempArray = [[[NSMutableArray alloc] init] autorelease];
     
@@ -54,24 +63,24 @@
     int startPosition = range.location;
     
     // Extracting initial I & J values from range info
-    //
-    if (startPosition != 0) {
-        
-        for (int k=1; k<=maxI; k++) {
-            
+    if (startPosition != 0)
+    {
+        for (int k=1; k<=maxI; k++)
+        {
             int d = k * maxI;
             
-            if (d/startPosition == 1) {
+            if (d/startPosition == 1)
+            {
                 startI = maxI - (d % startPosition);
                 break;
             }
-            else if (d/startPosition > 1) {
+            else if (d/startPosition > 1)
+            {
                 startI = startPosition;
                 break;
             }
             
             startJ++;
-            
         }
     }
     
@@ -79,17 +88,23 @@
     int positionY = startJ * size.height;
     BOOL isReady = NO;
     
-    while (positionY < height) {
-        
-        while (positionX < width) {
-            
-            CGImageRef sprite = CGImageCreateWithImageInRect(spriteSheet, CGRectMake(positionX, positionY, size.width, size.height));
+    while (positionY < height)
+    {
+        while (positionX < width)
+        {
+            CGImageRef sprite = CGImageCreateWithImageInRect(spriteSheet,
+                                                             CGRectMake(positionX,
+                                                                        positionY,
+                                                                        size.width,
+                                                                        size.height));
             [tempArray addObject:[UIImage imageWithCGImage:sprite]];
             
             CGImageRelease(sprite);
             
             length++;
-            if (length == range.length) {
+            
+            if (length == range.length)
+            {
                 isReady = YES;
                 break;
             }
@@ -105,5 +120,6 @@
     
     return [NSArray arrayWithArray:tempArray];
 }
+
 
 @end
