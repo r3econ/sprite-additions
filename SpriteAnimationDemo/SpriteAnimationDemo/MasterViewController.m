@@ -35,16 +35,6 @@
 @implementation MasterViewController
 
 
-- (void)dealloc
-{
-    [settingsView release];
-    [locationLabel release];
-    [lengthLabel release];
-    [customRangeSwitch release];
-    [super dealloc];
-}
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -63,20 +53,7 @@
 }
 
 
-- (void)viewDidUnload
-{
-    [imageView release];
-    imageView = nil;
-    [settingsView release];
-    settingsView = nil;
-    [locationLabel release];
-    locationLabel = nil;
-    [lengthLabel release];
-    lengthLabel = nil;
-    [customRangeSwitch release];
-    customRangeSwitch = nil;
-    [super viewDidUnload];
-}
+#pragma mark - Actions
 
 
 - (IBAction)buttonAction:(id)sender

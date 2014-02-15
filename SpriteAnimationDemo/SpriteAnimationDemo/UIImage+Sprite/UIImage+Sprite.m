@@ -49,7 +49,7 @@
         return nil;
     
     CGImageRef spriteSheet = [image CGImage];
-    NSMutableArray *tempArray = [[[NSMutableArray alloc] init] autorelease];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     
     int width = CGImageGetWidth(spriteSheet);
     int height = CGImageGetHeight(spriteSheet);
