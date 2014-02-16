@@ -8,10 +8,25 @@ This can be useful in UIImageView animations where animationImages array has to 
 	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
 	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
 
+Quick start
+=======
+
+Just copy `UIImage+SpriteAdditions.h` and `UIImage+SpriteAdditions.m` to your project or use CocoaPods to install the pod.
+
+Instructions for CocoaPods users:
+
+1. Install [CocoaPods](http://cocoapods.org/) with `gem install cocoapods`.
+2. Create a file in your XCode project called `Podfile` and add the following line:
+
+        pod 'UIImage+SpriteAdditions'
+
+3. Run `pod install` in your xcode project directory. CocoaPods should download and
+install the UIImage+SpriteAdditions category, and create a new Xcode workspace. Open up this workspace in Xcode.
+
 How to
 =======
 
-There are two methods in UIImage+Sprite category. First one:
+There are two methods in UIImage+SpriteAdditions category. First one:
 
 	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
 
