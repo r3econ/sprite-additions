@@ -47,7 +47,7 @@ Demo
 
 SpriteAnimationDemo project presents the usage of the UIImage+Sprite methods. The example shows how to create an animated UIImageView. This cool explosion sprite sheet which I included in the demo can be found at http://gushh.net/blog/free-game-sprites-explosion-3/. I added some numbers to this image to make testing and debugging easier.
 
-[![](http://dl.dropbox.com/u/7121070/github/UIImage-Sprite-Additions/t1.png)](http://dl.dropbox.com/u/7121070/github/UIImage-Sprite-Additions/1.png)
+![](https://dl.dropboxusercontent.com/u/7121070/github/UIImage-Sprite-Additions/sprite-animation.gif)
 
 License
 =======
