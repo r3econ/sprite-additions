@@ -16,8 +16,6 @@
 		AF044E3414758C5000B2C688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E3314758C5000B2C688 /* AppDelegate.m */; };
 		AF044E3714758C5000B2C688 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF044E3614758C5000B2C688 /* MasterViewController.m */; };
 		AF044E3D14758C5000B2C688 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF044E3B14758C5000B2C688 /* MasterViewController.xib */; };
-		AF044E4E1475951100B2C688 /* explosion_4_39_128.png in Resources */ = {isa = PBXBuildFile; fileRef = AF044E4D1475951100B2C688 /* explosion_4_39_128.png */; };
-		AF044E541476E9C400B2C688 /* explosion_4_39_128_debug.png in Resources */ = {isa = PBXBuildFile; fileRef = AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */; };
 		B53AF6F3190EFCCB00C29B17 /* UIImage+Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AF6F2190EFCCB00C29B17 /* UIImage+Sprite.m */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +34,6 @@
 		AF044E3514758C5000B2C688 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		AF044E3614758C5000B2C688 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		AF044E3C14758C5000B2C688 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
-		AF044E4D1475951100B2C688 /* explosion_4_39_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion_4_39_128.png; sourceTree = "<group>"; };
-		AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion_4_39_128_debug.png; sourceTree = "<group>"; };
 		B53AF6F1190EFCCB00C29B17 /* UIImage+Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Sprite.h"; path = "SpriteAnimationDemo/UIImage+Sprite.h"; sourceTree = SOURCE_ROOT; };
 		B53AF6F2190EFCCB00C29B17 /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Sprite.m"; path = "SpriteAnimationDemo/UIImage+Sprite.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -87,13 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				AF044E4914758D8300B2C688 /* UIImage+SpriteAdditions */,
-				AF044E3214758C5000B2C688 /* AppDelegate.h */,
-				AF044E3314758C5000B2C688 /* AppDelegate.m */,
-				AF044E3514758C5000B2C688 /* MasterViewController.h */,
-				AF044E3614758C5000B2C688 /* MasterViewController.m */,
-				AF044E3B14758C5000B2C688 /* MasterViewController.xib */,
-				AF044E531476E9C400B2C688 /* explosion_4_39_128_debug.png */,
-				AF044E4D1475951100B2C688 /* explosion_4_39_128.png */,
+				AF9201081BB59D4B00B12591 /* App Delegate */,
+				AF9201071BB59D3900B12591 /* View Controllers */,
 				86FE6C9918AFDC8A0084C082 /* Images.xcassets */,
 				AF044E2A14758C5000B2C688 /* Supporting Files */,
 			);
@@ -119,6 +110,25 @@
 			);
 			name = "UIImage+SpriteAdditions";
 			path = "UIImage+Sprite";
+			sourceTree = "<group>";
+		};
+		AF9201071BB59D3900B12591 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E3514758C5000B2C688 /* MasterViewController.h */,
+				AF044E3614758C5000B2C688 /* MasterViewController.m */,
+				AF044E3B14758C5000B2C688 /* MasterViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AF9201081BB59D4B00B12591 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AF044E3214758C5000B2C688 /* AppDelegate.h */,
+				AF044E3314758C5000B2C688 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +157,7 @@
 		AF044E1614758C5000B2C688 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0640;
 			};
 			buildConfigurationList = AF044E1914758C5000B2C688 /* Build configuration list for PBXProject "SpriteAnimationDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -174,8 +184,6 @@
 				AF044E2E14758C5000B2C688 /* InfoPlist.strings in Resources */,
 				86FE6C9A18AFDC8A0084C082 /* Images.xcassets in Resources */,
 				AF044E3D14758C5000B2C688 /* MasterViewController.xib in Resources */,
-				AF044E4E1475951100B2C688 /* explosion_4_39_128.png in Resources */,
-				AF044E541476E9C400B2C688 /* explosion_4_39_128_debug.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +227,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -231,10 +247,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -243,15 +264,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

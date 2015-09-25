@@ -71,7 +71,7 @@
     // This cool sprite sheet can be found at http://gushh.net/blog/free-game-sprites-explosion-3/
     // I added numbers to this image to make testing and debuging easier.
     //
-    UIImage *spriteSheet = [UIImage imageNamed:@"explosion_4_39_128_debug"];
+    UIImage *spriteSheet = [UIImage imageNamed:@"explosions_debug"];
     
     if ([customRangeSwitch isOn])
     {
