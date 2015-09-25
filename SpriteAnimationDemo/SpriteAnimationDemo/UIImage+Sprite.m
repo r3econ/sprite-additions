@@ -34,7 +34,6 @@
 - (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image
                               spriteSize:(CGSize)size
 {
-    
     return [self spritesWithSpriteSheetImage:self
                                      inRange:NSMakeRange(0, lroundf(MAXFLOAT))
                                   spriteSize:size];
@@ -46,7 +45,9 @@
                               spriteSize:(CGSize)size
 {
     if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0)
+    {
         return nil;
+    }
     
     CGImageRef spriteSheet = [image CGImage];
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
