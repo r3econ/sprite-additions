@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "UIImage+SpriteAdditions"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Useful UIImage category for handling sprite sheets."
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ This method does exactly the same thing as the latter. However, this time we can
 
 Note that for performance reasons you should not fire these methods every time you want to get the array of animation frames. You should rather fire it once and store the output array somewhere. This is because the Core Graphics image manipulation operations (especially on large images) are not so fast and your application may slow down.
 
-I wrote this add-on to facilitate the setup of short animations using UIImageView. For more complex animations I recommend using OpenGLES. 
+I wrote this add-on to facilitate the setup of short animations using UIImageView. For more complex animations I recommend using OpenGLES or SpriteKit. 
  
 Demo
 =======
@@ -46,10 +46,10 @@ SpriteAnimationDemo project presents the usage of the UIImage+Sprite methods. Th
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Rafał Sroka" => "rafal.sroka.it@gmail.com" }
 
-  s.social_media_url = "http://twitter.com/r3econ"
-  s.platform     = :ios, '6.0'
+  s.social_media_url = "http://twitter.com/srokaraf"
+  s.platform     = :ios, '7.0'
 
-  s.source       = { :git => "https://github.com/r3econ/UIImage-Sprite-Additions.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/r3econ/UIImage-Sprite-Additions.git", :tag => "1.0.1" }
 
   s.source_files  = 'Classes/*.{h,m}', 'SpriteAnimationDemo/**/*.{h,m}'
   s.framework  = 'CoreGraphics'
