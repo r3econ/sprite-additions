@@ -40,9 +40,5 @@
     IBOutlet UISwitch *customRangeSwitch;
 }
 
-- (IBAction)buttonAction:(id)sender;
-- (IBAction)locationValueChanged:(id)sender;
-- (IBAction)lengthValueChanged:(id)sender;
-- (IBAction)switchValueChanged:(id)sender;
 
 @end
