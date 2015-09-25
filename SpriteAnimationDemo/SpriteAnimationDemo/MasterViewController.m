@@ -90,9 +90,9 @@
         [imageView setAnimationImages:arrayWithSprites];
     }
     
-    NSLog(@"Sprite images: %i", [imageView.animationImages count]);
+    NSLog(@"Sprite images: %lu", (unsigned long)[imageView.animationImages count]);
     
-    float animationDuration = [imageView.animationImages count] * 0.100; // 100ms per frame
+    float animationDuration = [imageView.animationImages count] * 0.100f; // 100ms per frame
     
     [imageView setAnimationRepeatCount:0];
     [imageView setAnimationDuration:animationDuration];
