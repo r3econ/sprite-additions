@@ -51,23 +51,23 @@
     CGImageRef spriteSheet = [image CGImage];
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     
-    int width = CGImageGetWidth(spriteSheet);
-    int height = CGImageGetHeight(spriteSheet);
+    CGFloat width = CGImageGetWidth(spriteSheet);
+    CGFloat height = CGImageGetHeight(spriteSheet);
     
-    int maxI = width / size.width;
+    NSUInteger maxI = (NSUInteger)(width / size.width);
     
-    int startI = 0;
-    int startJ = 0;
-    int length = 0;
+    NSUInteger startI = 0;
+    NSUInteger startJ = 0;
+    NSUInteger length = 0;
     
-    int startPosition = range.location;
+    NSUInteger startPosition = range.location;
     
     // Extracting initial I & J values from range info
     if (startPosition != 0)
     {
         for (int k=1; k<=maxI; k++)
         {
-            int d = k * maxI;
+            NSUInteger d = k * maxI;
             
             if (d/startPosition == 1)
             {
@@ -84,8 +84,8 @@
         }
     }
     
-    int positionX = startI * size.width;
-    int positionY = startJ * size.height;
+    CGFloat positionX = startI * size.width;
+    CGFloat positionY = startJ * size.height;
     BOOL isReady = NO;
     
     while (positionY < height)
