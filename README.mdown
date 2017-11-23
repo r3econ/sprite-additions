@@ -1,17 +1,17 @@
 UIImage Sprite Additions
 =============
 
-Useful UIImage category for handling sprite sheets. This add-on smoothes the way of extracting images from a sprite sheet (texture atlas).
+Useful `UIImage` category for handling sprite sheets. This add-on smoothes the way of extracting images from a sprite sheet (texture atlas).
 
-This can be useful in UIImageView animations where animationImages array has to be filled with a set of images representing frames. UIImage-Sprite category makes this process trivial by introducing two methods:
-
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
-
+This can be useful in `UIImageView` animations where animationImages array has to be filled with a set of images representing frames. `UIImage-Sprite` category makes this process trivial by introducing two methods:
+```objective-c
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
+```
 Quick start
 =======
 
-Just copy `UIImage+SpriteAdditions.h` and `UIImage+SpriteAdditions.m` to your project or use CocoaPods to install the pod.
+Just copy `UIImage+Sprite.h` and `UIImage+Sprite.m` to your project or use CocoaPods to install the pod.
 
 Instructions for CocoaPods users:
 
@@ -21,33 +21,33 @@ Instructions for CocoaPods users:
         pod 'UIImage+SpriteAdditions'
 
 3. Run `pod install` in your xcode project directory. CocoaPods should download and
-install the UIImage+SpriteAdditions category, and create a new Xcode workspace. Open up this workspace in Xcode.
+install the `UIImage+SpriteAdditions` category, and create a new Xcode workspace. Open up this workspace in Xcode.
 
 How to
 =======
 
-There are two methods in UIImage+SpriteAdditions category. First one:
-
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
-
-The method returns an array with UIImages. Original sprite sheet (image) is sliced into smaller chunks, each of the specified size. 
+There are two methods in `UIImage+SpriteAdditions` category. First one:
+```objective-c
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image  spriteSize:(CGSize)size;
+```
+The method returns an array with `UIImage` objects. Original sprite sheet (image) is sliced into smaller chunks, each of the specified size. 
 
 Second method is very similar:
-
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
-
+```objective-c
+- (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
+```
 This method does exactly the same thing as the latter. However, this time we can specify the range of the chunks we want to get.
 
-Note that for performance reasons you should not fire these methods every time you want to get the array of animation frames. You should rather fire it once and store the output array somewhere. This is because the Core Graphics image manipulation operations (especially on large images) are not so fast and your application may slow down.
+Note that for performance reasons you should not fire these methods every time you want to get the array of animation frames. You should rather fire it once and store the output array somewhere. This is because the `CoreGraphics` image manipulation operations (especially on large images) are not so fast and your application may slow down.
 
-I wrote this add-on to facilitate the setup of short animations using UIImageView. For more complex animations I recommend using OpenGLES. 
+I wrote this add-on to facilitate the setup of short animations using `UIImageView`. For more complex animations I recommend using `OpenGLES`. 
  
 Demo
 =======
 
-SpriteAnimationDemo project presents the usage of the UIImage+Sprite methods. The example shows how to create an animated UIImageView. This cool explosion sprite sheet which I included in the demo can be found at http://gushh.net/blog/free-game-sprites-explosion-3/. I added some numbers to this image to make testing and debugging easier.
+SpriteAnimationDemo project presents the usage of the UIImage+Sprite methods. The example shows how to create an animated `UIImageView`. This cool explosion sprite sheet which I included in the demo can be found [here](http://gushh.net/blog/free-game-sprites-explosion-3/). I added some numbers to this image to make testing and debugging easier.
 
-![](https://dl.dropboxusercontent.com/u/7121070/github/UIImage-Sprite-Additions/sprite-animation.gif)
+![Imgur](https://i.imgur.com/lPNJnso.gif)
 
 License
 =======
@@ -55,9 +55,3 @@ License
 This code is distributed under the terms and conditions of the MIT license. 
 
 Copyright (c) 2011 Rafal Sroka
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
