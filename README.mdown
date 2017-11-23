@@ -50,7 +50,7 @@ I wrote this add-on to facilitate the setup of short animations using `UIImageVi
 Demo
 =======
 
-SpriteAnimationDemo project presents the usage of the UIImage+Sprite methods. The example shows how to create an animated `UIImageView`. This cool explosion sprite sheet which I included in the demo can be found [here](http://gushh.net/blog/free-game-sprites-explosion-3/). I added some numbers to this image to make testing and debugging easier.
+`SpriteAnimationDemo` project presents the usage of the `UIImage+Sprite` methods. The example shows how to create an animated `UIImageView`. This cool explosion sprite sheet which I included in the demo can be found [here](http://gushh.net/blog/free-game-sprites-explosion-3/). I added some numbers to this image to make testing and debugging easier.
 
 ![Imgur](https://i.imgur.com/lPNJnso.gif)
 
