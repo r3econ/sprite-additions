@@ -30,15 +30,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface MasterViewController : UIViewController
-{
-    IBOutlet UIImageView *imageView;
-    IBOutlet UILabel *lengthLabel;
-    IBOutlet UILabel *locationLabel;
-    IBOutlet UIView *settingsView;
-    IBOutlet UISwitch *customRangeSwitch;
-}
-
 
 @end

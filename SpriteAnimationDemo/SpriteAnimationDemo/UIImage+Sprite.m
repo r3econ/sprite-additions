@@ -32,8 +32,7 @@
 
 
 - (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image
-                              spriteSize:(CGSize)size
-{
+                              spriteSize:(CGSize)size {
     return [self spritesWithSpriteSheetImage:self
                                      inRange:NSMakeRange(0, lroundf(MAXFLOAT))
                                   spriteSize:size];
@@ -42,10 +41,8 @@
 
 - (NSArray *)spritesWithSpriteSheetImage:(UIImage *)image
                                  inRange:(NSRange)range
-                              spriteSize:(CGSize)size
-{
-    if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0)
-    {
+                              spriteSize:(CGSize)size {
+    if (!image || CGSizeEqualToSize(size, CGSizeZero) || range.length == 0) {
         return nil;
     }
     
@@ -64,8 +61,7 @@
     NSUInteger startPosition = range.location;
     
     // Extracting initial I & J values from range info
-    if (startPosition != 0)
-    {
+    if (startPosition != 0) {
         for (int k=1; k<=maxI; k++)
         {
             NSUInteger d = k * maxI;
@@ -89,10 +85,8 @@
     CGFloat positionY = startJ * size.height;
     BOOL isReady = NO;
     
-    while (positionY < height)
-    {
-        while (positionX < width)
-        {
+    while (positionY < height) {
+        while (positionX < width) {
             CGImageRef sprite = CGImageCreateWithImageInRect(spriteSheet,
                                                              CGRectMake(positionX,
                                                                         positionY,
@@ -104,8 +98,7 @@
             
             length++;
             
-            if (length == range.length)
-            {
+            if (length == range.length) {
                 isReady = YES;
                 break;
             }

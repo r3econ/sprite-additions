@@ -27,112 +27,93 @@
 //  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
 #import "MasterViewController.h"
 #import "UIImage+Sprite.h"
 
+@interface MasterViewController()
+
+@property(nonatomic, weak) IBOutlet UIImageView *imageView;
+@property(nonatomic, weak) IBOutlet UILabel *lengthLabel;
+@property(nonatomic, weak) IBOutlet UILabel *locationLabel;
+@property(nonatomic, weak) IBOutlet UIView *settingsView;
+@property(nonatomic, weak) IBOutlet UISwitch *customRangeSwitch;
+
+@end
 
 @implementation MasterViewController
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-
 #pragma mark - View lifecycle
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setTitle:NSLocalizedString(@"Sprite Animation", @"")];
-    [self switchValueChanged:customRangeSwitch];
+    [self switchValueChanged:_customRangeSwitch];
 }
-
 
 #pragma mark - Actions
 
-
-- (IBAction)buttonAction:(id)sender
-{
-    if ([imageView isAnimating])
-    {
-        [imageView stopAnimating];
+- (IBAction)buttonAction:(id)sender {
+    if ([_imageView isAnimating]) {
+        [_imageView stopAnimating];
         
         [((UIButton *)sender) setTitle:NSLocalizedString(@"Start animation!", @"")
                               forState:UIControlStateNormal];
         return;
     }
     
-    //
     // This cool sprite sheet can be found at http://gushh.net/blog/free-game-sprites-explosion-3/
     // I added numbers to this image to make testing and debuging easier.
     //
     UIImage *spriteSheet = [UIImage imageNamed:@"explosions_debug"];
     
-    if ([customRangeSwitch isOn])
-    {
-        NSRange range = NSMakeRange([locationLabel.text intValue],
-                                    [lengthLabel.text intValue]);
+    if ([_customRangeSwitch isOn]) {
+        NSRange range = NSMakeRange([_locationLabel.text intValue],
+                                    [_lengthLabel.text intValue]);
         
         NSArray *arrayWithSprites = [spriteSheet spritesWithSpriteSheetImage:spriteSheet
                                                                      inRange:range
                                                                   spriteSize:CGSizeMake(128, 128)];
-        [imageView setAnimationImages:arrayWithSprites];
+        [_imageView setAnimationImages:arrayWithSprites];
     }
-    else
-    {
+    else {
         NSArray *arrayWithSprites = [spriteSheet spritesWithSpriteSheetImage:spriteSheet
                                                                   spriteSize:CGSizeMake(128, 128)];
-        [imageView setAnimationImages:arrayWithSprites];
+        [_imageView setAnimationImages:arrayWithSprites];
     }
     
-    NSLog(@"Sprite images: %lu", (unsigned long)[imageView.animationImages count]);
+    NSLog(@"Sprite images: %lu", (unsigned long)[_imageView.animationImages count]);
     
-    float animationDuration = [imageView.animationImages count] * 0.100f; // 100ms per frame
+    float animationDuration = [_imageView.animationImages count] * 0.100f; // 100ms per frame
     
-    [imageView setAnimationRepeatCount:0];
-    [imageView setAnimationDuration:animationDuration];
-    [imageView startAnimating];
+    [_imageView setAnimationRepeatCount:0];
+    [_imageView setAnimationDuration:animationDuration];
+    [_imageView startAnimating];
     
     [((UIButton *)sender) setTitle:NSLocalizedString(@"Stop animation!", @"")
                           forState:UIControlStateNormal];
 }
 
-
-- (IBAction)locationValueChanged:(id)sender
-{
-    locationLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
+- (IBAction)locationValueChanged:(id)sender {
+    _locationLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
 }
 
-
-- (IBAction)lengthValueChanged:(id)sender
-{
-    lengthLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
+- (IBAction)lengthValueChanged:(id)sender {
+    _lengthLabel.text = [NSString stringWithFormat:@"%.0f", ((UIStepper *)sender).value];
 }
 
-
-- (IBAction)switchValueChanged:(id)sender
-{
+- (IBAction)switchValueChanged:(id)sender {
     UISwitch *sw = (UISwitch *)sender;
-    [settingsView setUserInteractionEnabled:[sw isOn]];
+    [_settingsView setUserInteractionEnabled:[sw isOn]];
     
-    [UIView animateWithDuration:1.0f
-                     animations:^
-     {
-         if ([sw isOn])
-         {
-             [settingsView setAlpha:1.0];
-         }
-         else
-         {
-             [settingsView setAlpha:0.2];
-         }
-     }];
+    [UIView animateWithDuration:1.0f animations:^{
+        if ([sw isOn]) {
+            [_settingsView setAlpha:1.0];
+        }
+        else {
+            [_settingsView setAlpha:0.2];
+        }
+    }];
 }
-
 
 @end

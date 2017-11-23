@@ -52,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8636FACE1FC7809500271A1B /* UIImage+SpriteAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				B53AF6F1190EFCCB00C29B17 /* UIImage+Sprite.h */,
+				B53AF6F2190EFCCB00C29B17 /* UIImage+Sprite.m */,
+			);
+			name = "UIImage+SpriteAdditions";
+			sourceTree = "<group>";
+		};
 		AF044E1414758C5000B2C688 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +91,7 @@
 		AF044E2914758C5000B2C688 /* SpriteAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AF044E4914758D8300B2C688 /* UIImage+SpriteAdditions */,
+				8636FACE1FC7809500271A1B /* UIImage+SpriteAdditions */,
 				AF9201081BB59D4B00B12591 /* App Delegate */,
 				AF9201071BB59D3900B12591 /* View Controllers */,
 				86FE6C9918AFDC8A0084C082 /* Images.xcassets */,
@@ -100,16 +109,6 @@
 				AF044E3114758C5000B2C688 /* SpriteAnimationDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF044E4914758D8300B2C688 /* UIImage+SpriteAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				B53AF6F1190EFCCB00C29B17 /* UIImage+Sprite.h */,
-				B53AF6F2190EFCCB00C29B17 /* UIImage+Sprite.m */,
-			);
-			name = "UIImage+SpriteAdditions";
-			path = "UIImage+Sprite";
 			sourceTree = "<group>";
 		};
 		AF9201071BB59D3900B12591 /* View Controllers */ = {
