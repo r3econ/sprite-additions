@@ -4,7 +4,7 @@
 //  Created by Rafal Sroka on 11-11-17.
 //  Copyright (c) 2011 Rafal Sroka. All rights reserved.
 //
-//  This code is distributed under the terms and conditions of the MIT license. 
+//  This code is distributed under the terms and conditions of the MIT license.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining
 //  a copy of this software and associated documentation files (the
