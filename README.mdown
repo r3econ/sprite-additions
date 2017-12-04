@@ -1,5 +1,6 @@
 
 [![Build Status](https://travis-ci.org/r3econ/UIImage-Sprite-Additions.svg?branch=master)](https://travis-ci.org/r3econ/UIImage-Sprite-Additions)
+[![CodeFactor](https://www.codefactor.io/repository/github/r3econ/sprite-additions/badge)](https://www.codefactor.io/repository/github/r3econ/sprite-additions)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-ios%20%7C%20tvos-lightgrey.svg)
 
